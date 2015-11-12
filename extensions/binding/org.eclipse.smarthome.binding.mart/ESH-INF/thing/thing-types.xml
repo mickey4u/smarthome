@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="mart"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+	<!-- Sample Thing Type -->
+	<thing-type id="adapter">
+		<label>Mart Smart Adapter</label>
+		<description>Smart adapter with power consumption logging</description>
+
+		<channels>
+			<channel typeId="state" id="state"/>
+			<channel id="powerConsumed" typeId="powerConsumed" />
+			<channel typeId="onToday" id="onToday"/>
+		</channels>
+
+		<config-description>
+			<parameter name="uniqueDeviceId" type="text">
+				<label>Unique Device Id</label>
+				<required>true</required>
+				<description></description>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+
+	<!-- Sample Channel Type -->
+	<channel-type id="state">
+		<item-type>Switch</item-type>
+		<label>mart Binding Channel</label>
+		<description>Sample channel for mart Binding</description>
+	</channel-type>
+
+</thing:thing-descriptions>
